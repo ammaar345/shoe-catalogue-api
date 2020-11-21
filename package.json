@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -23,7 +24,6 @@
     "express-flash": "0.0.2",
     "express-handlebars": "^5.2.0",
     "express-session": "^1.17.1",
-    "flash": "^1.1.0",
     "heroku": "^7.47.3",
     "mocha": "^8.2.1",
     "nodemon": "^2.0.6",

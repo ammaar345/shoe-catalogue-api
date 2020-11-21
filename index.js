@@ -17,10 +17,10 @@ const pool = new Pool({
   connectionString
 });
 
-// const Waiter = require("./waiter");
-// const WaiterRoutes = require('./waiterRoutes');
-// const waiter = Waiter(pool);
-// const waiterRoutes = WaiterRoutes(waiter);
+const ShoeCatalogue = require("./shoe-catalogue");
+const ShoeCatRoutes = require('./shoeCatRoutes');
+const shoeCatFunc = ShoeCatalogue(pool);
+const shoeCatRoutes = ShoeCatRoutes(shoeCatFunc);
 
 
 app.use(session({
@@ -37,3 +37,10 @@ app.engine('handlebars', exphbs({
 app.use(express.static("public"))
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
+// app.get('/api/shoes	',shoeCatRoutes.)
+// app.post('/api/shoes',shoeCatRoutes)
+// app.get('/api/shoes/brand/:brandname	');
+// app.get('/api/shoes/size/:size	',shoeCatRoutes.)
+// app.get('/api/shoes/brand/:brandname/size/:size	',shoeCatRoutes)
+// app.post('/api/shoes/sold/:id	',shoeCatRoutes)
+
