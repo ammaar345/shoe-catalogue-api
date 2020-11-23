@@ -37,10 +37,14 @@ app.engine('handlebars', exphbs({
 app.use(express.static("public"))
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
-// app.get('/api/shoes	',shoeCatRoutes.)
+app.get('/',shoeCatRoutes.home)
+// app.get('/api/shoes	',shoeCatRoutes)
 // app.post('/api/shoes',shoeCatRoutes)
 // app.get('/api/shoes/brand/:brandname	');
 // app.get('/api/shoes/size/:size	',shoeCatRoutes.)
 // app.get('/api/shoes/brand/:brandname/size/:size	',shoeCatRoutes)
 // app.post('/api/shoes/sold/:id	',shoeCatRoutes)
-
+const PORT = process.env.PORT || 2009;
+app.listen(PORT, function () {
+  console.log("App started at port :", PORT);
+})
