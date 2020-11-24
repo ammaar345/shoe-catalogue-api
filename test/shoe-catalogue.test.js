@@ -10,9 +10,14 @@ const pool = new Pool({
 
 
   }) 
-describe("should ...",async () => {
-assert.notDeepStrictEqual('bread','bread')
+describe("should ...", () => {
+  it('should bread',function(){
+    const shoe=ShoeCatalogue(pool);
 
+    assert.deepStrictEqual(shoe.bread(),'bread')
+    
+    
+  })
 
 
 
