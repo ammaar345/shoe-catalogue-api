@@ -37,7 +37,7 @@ app.engine('handlebars', exphbs({
 app.use(express.static("public"))
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
-app.get('/',shoeCatRoutes.home)
+// app.get('/',shoeCatRoutes.home)
 // app.get('/api/shoes	',shoeCatRoutes)
 // app.post('/api/shoes',shoeCatRoutes)
 // app.get('/api/shoes/brand/:brandname	');
