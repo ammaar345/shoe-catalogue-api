@@ -3,6 +3,7 @@ const express = require("express");
 const exphbs = require('express-handlebars');
 const bodyParser = require("body-parser")
 const app = express();
+const axios = require('axios').default;
 //
 
 //
@@ -37,6 +38,22 @@ app.engine('handlebars', exphbs({
 app.use(express.static("public"))
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
+
+
+
+
+
+
+
+
+async function getUser() {
+  try {
+    const response = await axios.get('/user?ID=12345');
+    console.log(response);
+  } catch (error) {
+    console.error(error);
+  }
+}  
 // app.get('/',shoeCatRoutes.home)
 // app.get('/api/shoes	',shoeCatRoutes)
 // app.post('/api/shoes',shoeCatRoutes)
