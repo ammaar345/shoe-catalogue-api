@@ -11,10 +11,10 @@ const pool = new Pool({
 
   }) 
 describe("should ...", () => {
-  it('should bread',function(){
-    const shoe=ShoeCatalogue(pool);
+  // it('should bread',function(){
+  //   const shoe=ShoeCatalogue(pool);
 
-    assert.deepStrictEqual(shoe.bread(),'bread')
+  //   assert.deepStrictEqual(shoe.bread(),'bread')
     
     
   })
