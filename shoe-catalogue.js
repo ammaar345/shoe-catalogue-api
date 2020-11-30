@@ -7,7 +7,7 @@
         return filteredBySize.rows
 
     }
-d 
+
     async function filterByBrand(brand) {
         const filterByBrand = await pool.query('select * from shoeinfo where brand=$1', [brand])
         return filterByBrand.rows
