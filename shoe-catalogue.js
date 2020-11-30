@@ -29,6 +29,7 @@ module.exports = function shoeCatFunction(pool) {
     }
     return {
         filterBySize,
+        filterByBrand,
         addStock,
         filterByBrandSize,
         allStock,

@@ -12,7 +12,7 @@ const session = require('express-session');
 const pg = require("pg");
 const Pool = pg.Pool;
 
-const connectionString = process.env.DATABASE_URL || 'postgresql://sneakygoblin:codex123@localhost:5432/waiters';
+const connectionString = process.env.DATABASE_URL || 'postgresql://sneakygoblin:codex123@localhost:5432/shoe-catalogue';
 
 const pool = new Pool({
   connectionString
@@ -37,26 +37,11 @@ app.engine('handlebars', exphbs({
 }));
 app.use(express.static("public"))
 app.use(bodyParser.urlencoded({ extended: false }))
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 
-
-
-
-
-
-
-
-async function getUser() {
-  try {
-    const response = await axios.get('/user?ID=12345');
-    console.log(response);
-  } catch (error) {
-    console.error(error);
-  }
-}  
-// app.get('/',shoeCatRoutes.home)
-// app.get('/api/shoes	',shoeCatRoutes)
-// app.post('/api/shoes',shoeCatRoutes)
+// app.get('/', shoeCatRoutes.home)
+app.get('/api/shoes',shoeCatRoutes.allStockDisplay)
+// app.post('/api/shoes',shoeCatRoutes.)
 // app.get('/api/shoes/brand/:brandname	');
 // app.get('/api/shoes/size/:size	',shoeCatRoutes.)
 // app.get('/api/shoes/brand/:brandname/size/:size	',shoeCatRoutes)
