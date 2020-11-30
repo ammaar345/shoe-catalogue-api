@@ -1,4 +1,4 @@
-module.exports = function shoeCatFunction(pool) {
+ module.exports = function shoeCatFunction(pool) {
     async function addStock(qty, brand, color, size) {
         await pool.query('insert into shoeinfo(qty,brand,color,size) values($1,$2,$3,$4)', [qty, brand, color, size])
     }
@@ -7,6 +7,7 @@ module.exports = function shoeCatFunction(pool) {
         return filteredBySize.rows
 
     }
+d 
     async function filterByBrand(brand) {
         const filterByBrand = await pool.query('select * from shoeinfo where brand=$1', [brand])
         return filterByBrand.rows
@@ -15,7 +16,7 @@ module.exports = function shoeCatFunction(pool) {
         const filteredByBrandSize = await pool.query(`
         SELECT *
         FROM shoeinfo
-        WHERE (brand = $1 AND size=$2)`);
+        WHERE (brand = $1 AND size=$2)`,[brand,size]);
         return filteredByBrandSize.rows;
     }
     async function allStock() {

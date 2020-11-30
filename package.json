@@ -1,7 +1,7 @@
 {
   "name": "shoe-catalogue-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "[![Build Status](https://travis-ci.com/ammaar345/shoe-catalogue-api.svg?branch=main)](https://travis-ci.com/ammaar345/shoe-catalogue-api) [![Coverage Status](https://coveralls.io/repos/github/ammaar345/shoe-catalogue-api/badge.svg?branch=main)](https://coveralls.io/github/ammaar345/shoe-catalogue-api?branch=main)",
   "main": "index.js",
   "scripts": {
     "test": "nyc --reporter=html --reporter=text mocha",
@@ -32,7 +32,14 @@
     "heroku": "^7.47.3",
     "mocha": "^8.2.1",
     "nodemon": "^2.0.6",
+    "npx": "^10.2.2",
     "nyc": "^15.1.0",
     "pg": "^8.5.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.14.0"
+  },
+  "directories": {
+    "test": "test"
   }
 }
