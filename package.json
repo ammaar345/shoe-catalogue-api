@@ -1,10 +1,13 @@
 {
   "name": "shoe-catalogue-api",
   "version": "1.0.0",
-  "description": "[![Build Status](https://travis-ci.com/ammaar345/shoe-catalogue-api.svg?branch=main)](https://travis-ci.com/ammaar345/shoe-catalogue-api) [![Coverage Status](https://coveralls.io/repos/github/ammaar345/shoe-catalogue-api/badge.svg?branch=main)](https://coveralls.io/github/ammaar345/shoe-catalogue-api?branch=main)",
+  "description": "[![Build Status](https://travis-ci.com/ammaar345/shoe-catalogue-api.svg?branch=main)](https://travis-ci.com/ammaar345/shoe-catalogue-api)\r [![Coverage Status](https://coveralls.io/repos/github/ammaar345/shoe-catalogue-api/badge.svg?branch=main)](https://coveralls.io/github/ammaar345/shoe-catalogue-api?branch=main)",
   "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
-    "test": "nyc --reporter=html --reporter=text mocha",
+    "test": "mocha",
     "start": "node index.js"
   },
   "repository": {
@@ -21,25 +24,13 @@
   "dependencies": {
     "axios": "^0.21.0",
     "body-parser": "^1.19.0",
-    "dev": "^0.1.3",
     "express": "^4.17.1",
-    "express-flash": "0.0.2",
     "express-handlebars": "^5.2.0",
     "express-session": "^1.17.1",
     "gulp": "^4.0.2",
-    "gulp-help": "^1.6.1",
-    "help": "^3.0.2",
     "heroku": "^7.47.3",
     "mocha": "^8.2.1",
-    "nodemon": "^2.0.6",
-    "npx": "^10.2.2",
     "nyc": "^15.1.0",
     "pg": "^8.5.1"
-  },
-  "devDependencies": {
-    "eslint": "^7.14.0"
-  },
-  "directories": {
-    "test": "test"
   }
 }
